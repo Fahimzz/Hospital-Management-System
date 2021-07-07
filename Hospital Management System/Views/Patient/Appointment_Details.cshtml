@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Hospital_Management_System.Models.Appointment>
+
+@{
+    ViewBag.Title = "Appointment_Details";
+}
+
+<head>
+
+
+    <title>Siopp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/Content/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+
+<h2>Appointment Details</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patients)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+           
+        </tr>
+    }
+
+</table>

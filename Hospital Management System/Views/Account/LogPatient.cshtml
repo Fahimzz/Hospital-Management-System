@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Hospital_Management_System.Models.Patientlog>
+
+@{
+    ViewBag.Title = "LogPatient";
+}
+<head>
+
+
+    <title>Siopp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/Content/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<h2>Patient Accounts Log</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operation)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operation)
+        </td>
+       
+    </tr>
+}
+
+</table>
